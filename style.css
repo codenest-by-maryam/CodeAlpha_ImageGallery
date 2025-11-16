@@ -44,7 +44,7 @@ h1 {
 
 
 /* Tablet: 3 columns */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .imageGallery {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
@@ -53,7 +53,10 @@ h1 {
 }
 
 /* Mobile: 1 column */
-@media (max-width: 480px) {
+@media (max-width: 480px){
+    h1{
+        font-size: 50px;
+    }
     .imageGallery {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -86,18 +89,18 @@ h1 {
 }
 
 /* Tablet: 3 columns */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .lightbox img {
-        width: 45%;
-        height: 40vh;
+        width: 70%;
+        height: 38vh;
     }
 }
 
 /* Mobile: 1 column */
 @media (max-width: 480px) {
     .lightbox img {
-        width: 70%;
-        height: 40vh;
+        width: 90%;
+        height: 35vh;
     }
 }
 
@@ -125,6 +128,7 @@ h1 {
     position: relative;
     background: linear-gradient(150deg, rgb(221, 221, 210), rgb(80, 80, 160), rgb(226, 116, 134));
     border: 3px solid rgba(98, 77, 156, 0.625);
+    background-clip: padding-box;
     color: white;
     font-size: 20px;
     padding: 5px 15px;
@@ -139,11 +143,16 @@ h1 {
 
 
 /* Tablet: 3 columns */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .lightbox-buttons {
-        bottom: 22%;
+        bottom: 24%;
         gap: 12px;
     }
+    .prev-lightbox,
+.next-lightbox{
+    font-size: 35px;
+    padding: 8px 27px;
+}
 }
 
 @media (max-width: 480px) {
